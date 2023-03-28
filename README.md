@@ -1,2 +1,2 @@
 # VR Chemsirty Lab
- Using Unity XR tool simple chemaical system
+ Using Unity XR tool simple chemical system
