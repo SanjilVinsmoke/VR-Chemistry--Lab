@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.57781535, g: 0.575558, b: 0.57781535, a: 1}
+  m_IndirectSpecularColor: {r: 0.57624906, g: 0.57624906, b: 0.57624906, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 2027561531}
   m_Colliders:
-  - {fileID: 1360108190}
+  - {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -886,7 +886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 676217264}
   - component: {fileID: 676217263}
-  - component: {fileID: 676217262}
+  - component: {fileID: 676217265}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -894,25 +894,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &676217262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676217261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &676217263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -941,8 +922,45 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &676217265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676217261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab68ce6587aab0146b8dabefbd806791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ClickSpeed: 0.3
+  m_MoveDeadzone: 0.6
+  m_RepeatDelay: 0.5
+  m_RepeatRate: 0.1
+  m_TrackedDeviceDragThresholdMultiplier: 1.4
+  m_ActiveInputMode: 0
+  m_MaxTrackedDeviceRaycastDistance: 1000
+  m_EnableXRInput: 1
+  m_EnableMouseInput: 1
+  m_EnableTouchInput: 1
+  m_PointAction: {fileID: 0}
+  m_LeftClickAction: {fileID: 0}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
+  m_NavigateAction: {fileID: 0}
+  m_SubmitAction: {fileID: 0}
+  m_CancelAction: {fileID: 0}
+  m_EnableBuiltinActionsAsFallback: 1
+  m_EnableGamepadInput: 1
+  m_EnableJoystickInput: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,14 +1969,8 @@ Transform:
   - {fileID: 1884771448}
   - {fileID: 1026120729}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1360108190 stripped
-CapsuleCollider:
-  m_CorrespondingSourceObject: {fileID: 3435788307733467119, guid: 37768e5cc1f7ce144a6ff9608d775e68,
-    type: 3}
-  m_PrefabInstance: {fileID: 299332507}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1360108193 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3435788307733467120, guid: 37768e5cc1f7ce144a6ff9608d775e68,
@@ -1980,7 +1992,7 @@ GameObject:
   - component: {fileID: 1497381674}
   - component: {fileID: 1497381673}
   m_Layer: 0
-  m_Name: Right Ray Teleporation  Interactor
+  m_Name: Right Ray Teleporation Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2127,8 +2139,10 @@ MonoBehaviour:
   m_SmoothMovement: 0
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
-  m_Reticle: {fileID: 1885109180}
-  m_BlockedReticle: {fileID: 0}
+  m_Reticle: {fileID: 3435788307733467116, guid: 37768e5cc1f7ce144a6ff9608d775e68,
+    type: 3}
+  m_BlockedReticle: {fileID: 8455738581010291121, guid: 5a3cc004873e9fd46a5a976aeeb8b417,
+    type: 3}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
   m_SnapEndpointIfAvailable: 1
@@ -2248,7 +2262,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 2
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -2298,7 +2312,7 @@ MonoBehaviour:
   m_AudioClipForOnHoverCanceled: {fileID: 0}
   m_AllowHoverAudioWhileSelecting: 1
   m_PlayHapticsOnSelectEntered: 1
-  m_HapticSelectEnterIntensity: 0.09
+  m_HapticSelectEnterIntensity: 0.425
   m_HapticSelectEnterDuration: 0.2
   m_PlayHapticsOnSelectExited: 0
   m_HapticSelectExitIntensity: 0
@@ -2738,8 +2752,10 @@ MonoBehaviour:
   m_SmoothMovement: 0
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
-  m_Reticle: {fileID: 1885109180}
-  m_BlockedReticle: {fileID: 0}
+  m_Reticle: {fileID: 3435788307733467116, guid: 37768e5cc1f7ce144a6ff9608d775e68,
+    type: 3}
+  m_BlockedReticle: {fileID: 8455738581010291121, guid: 5a3cc004873e9fd46a5a976aeeb8b417,
+    type: 3}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
   m_SnapEndpointIfAvailable: 1
@@ -2859,7 +2875,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 2
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -2909,7 +2925,7 @@ MonoBehaviour:
   m_AudioClipForOnHoverCanceled: {fileID: 0}
   m_AllowHoverAudioWhileSelecting: 1
   m_PlayHapticsOnSelectEntered: 1
-  m_HapticSelectEnterIntensity: 0.09
+  m_HapticSelectEnterIntensity: 0.248
   m_HapticSelectEnterDuration: 0.2
   m_PlayHapticsOnSelectExited: 0
   m_HapticSelectExitIntensity: 0
@@ -2992,8 +3008,7 @@ GameObject:
   - component: {fileID: 1560308386}
   - component: {fileID: 1560308391}
   - component: {fileID: 1560308392}
-  - component: {fileID: 1560308393}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: XR Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3137,46 +3152,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
---- !u!114 &1560308393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560308385}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 482fa449214405445b6c373debe43e8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftTeleportation: {fileID: 1557007311}
-  rightTeleportation: {fileID: 1497381672}
-  leftActive:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Active
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 0a47b639-1c7f-4c26-86cf-5489b5a0719f
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
-  rightActive:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Right Active
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: e252c3fb-0e0b-4ba1-8aac-868cdbfef9f9
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
 --- !u!1 &1862109140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6295145287805738967, guid: 3fefbb6402fd99f4688467a7de572ef1,
@@ -3283,89 +3258,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1884771447}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1885109180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1885109184}
-  - component: {fileID: 1885109183}
-  - component: {fileID: 1885109182}
-  m_Layer: 0
-  m_Name: Cylinder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!23 &1885109182
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885109180}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: ab28ee0c9641b6743b59c3825a8ff74d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1885109183
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885109180}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1885109184
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885109180}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.659, y: 0.215, z: 0}
-  m_LocalScale: {x: 1, y: 0.039574783, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027561530
 GameObject:
   m_ObjectHideFlags: 0
@@ -3665,6 +3557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExperimentBottle
       objectReference: {fileID: 0}
+    - target: {fileID: 6295145286889240464, guid: 3fefbb6402fd99f4688467a7de572ef1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6295145286889240472, guid: 3fefbb6402fd99f4688467a7de572ef1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3810,6 +3707,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.625
       objectReference: {fileID: 0}
+    - target: {fileID: 6295145287249537563, guid: 3fefbb6402fd99f4688467a7de572ef1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295145287255163950, guid: 3fefbb6402fd99f4688467a7de572ef1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6295145287255164886, guid: 3fefbb6402fd99f4688467a7de572ef1,
         type: 3}
       propertyPath: m_InteractionManager
@@ -3834,6 +3741,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SodiumHydroChorideSolution
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295145287420923976, guid: 3fefbb6402fd99f4688467a7de572ef1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6295145287420924016, guid: 3fefbb6402fd99f4688467a7de572ef1,
         type: 3}
@@ -3940,5 +3852,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 2027561531}
+    - target: {fileID: 6295145288813402199, guid: 3fefbb6402fd99f4688467a7de572ef1,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fefbb6402fd99f4688467a7de572ef1, type: 3}
